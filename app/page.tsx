@@ -100,17 +100,6 @@ export default function Home() {
       <header className="border-b">
         <div className="container flex h-16 items-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-lg font-semibold">NDA Checker</h1>
-          <nav className="ml-auto flex gap-4">
-            <Link href="/" className="text-sm font-medium">
-              Home
-            </Link>
-            <Link href="#" className="text-sm font-medium">
-              About
-            </Link>
-            <Link href="#" className="text-sm font-medium">
-              Help
-            </Link>
-          </nav>
         </div>
       </header>
       <main className="flex-1">
@@ -270,94 +259,13 @@ export default function Home() {
           </section>
         )}
 
-        <section className="container px-4 py-12 sm:px-6 lg:px-8 bg-muted/50">
-          <div className="mx-auto max-w-5xl">
-            <div className="grid gap-8 md:grid-cols-3">
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-6 w-6"
-                  >
-                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                    <polyline points="14 2 14 8 20 8" />
-                  </svg>
-                </div>
-                <h3 className="mt-4 text-lg font-medium">Document Comparison</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Analyze differences between your reference NDA and customer NDAs.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-6 w-6"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </div>
-                <h3 className="mt-4 text-lg font-medium">Risk Identification</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Highlight potentially risky clauses and terms in customer NDAs.
-                </p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-6 w-6"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                </div>
-                <h3 className="mt-4 text-lg font-medium">Recommendations</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Get actionable advice on whether to accept, negotiate, or reject terms.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <footer className="border-t py-6">
-        <div className="container flex flex-col items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 md:flex-row">
-          <p className="text-sm text-muted-foreground">© 2025 NDA Checker. All rights reserved.</p>
-          <nav className="flex gap-4">
-            <Link href="#" className="text-sm text-muted-foreground hover:underline">
-              Terms
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:underline">
-              Privacy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:underline">
-              Contact
-            </Link>
-          </nav>
+        <div className="container flex flex-col items-center justify-center gap-2 px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-muted-foreground">
+            Powered by <span className="font-semibold">Upstage Document Parse</span> and <span className="font-semibold">Solar LLM</span>
+          </p>
+          <p className="text-xs text-muted-foreground">© 2025 NDA Checker. All rights reserved.</p>
         </div>
       </footer>
     </div>
