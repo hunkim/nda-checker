@@ -150,36 +150,7 @@ export function SummaryView({ analysisResult }: SummaryViewProps) {
               )}
             </ol>
           </div>
-
-          <div className="border rounded-md p-4">
-            <h4 className="font-medium mb-3">Alternative Approach</h4>
-            <p className="text-sm text-muted-foreground mb-3">
-              {summary.overallRisk === "high" 
-                ? "If the customer is unwilling to negotiate the high-risk terms, consider proposing your reference NDA as an alternative."
-                : "Consider whether the current terms are acceptable or if minor adjustments would be beneficial."
-              }
-            </p>
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm">
-                Use Reference NDA
-              </Button>
-              <Button variant="outline" size="sm">
-                Compare Side-by-Side
-              </Button>
-            </div>
-          </div>
         </CardContent>
-        <CardFooter className="flex flex-col sm:flex-row gap-3">
-          <Button className="w-full sm:w-auto" variant="destructive">
-            Reject NDA
-          </Button>
-          <Button className="w-full sm:w-auto" variant="outline">
-            Request Changes
-          </Button>
-          <Button className="w-full sm:w-auto">
-            {summary.overallRisk === "low" ? "Accept" : "Accept with Caution"}
-          </Button>
-        </CardFooter>
       </Card>
     </div>
   )

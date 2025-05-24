@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ComparisonView } from "@/components/comparison-view"
 import { RiskAnalysis } from "@/components/risk-analysis"
 import { SummaryView } from "@/components/summary-view"
-import { Loader2, CheckCircle, FileText, Brain, Shield } from "lucide-react"
+import { Loader2, CheckCircle, FileText, Brain, Shield, Github } from "lucide-react"
 
 interface UploadedDocument {
   fileName: string
@@ -97,11 +97,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="border-b">
-        <div className="container flex h-16 items-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-lg font-semibold">NDA Checker</h1>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="container px-4 py-12 md:py-16 lg:py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -262,9 +257,16 @@ export default function Home() {
       </main>
       <footer className="border-t py-6">
         <div className="container flex flex-col items-center justify-center gap-2 px-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-muted-foreground">
-            Powered by <span className="font-semibold">Upstage Document Parse</span> and <span className="font-semibold">Solar LLM</span>
-          </p>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <span>
+              Powered by <a href="https://console.upstage.ai" target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline text-foreground">Upstage Document Parse and Solar LLM</a>
+            </span>
+            <span>•</span>
+            <a href="https://github.com/hunkim/nda-checker" target="_blank" rel="noopener noreferrer" className="hover:underline text-foreground flex items-center gap-1">
+              <Github className="h-4 w-4" />
+              Open Source on GitHub
+            </a>
+          </div>
           <p className="text-xs text-muted-foreground">© 2025 NDA Checker. All rights reserved.</p>
         </div>
       </footer>
