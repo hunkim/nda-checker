@@ -17,9 +17,14 @@ Create a `.env.local` file in the root directory and add your Upstage API key:
 
 ```bash
 UPSTAGE_API_KEY=your_upstage_api_key_here
+UPSTAGE_MODEL_NAME=solar-pro2-preview  # Optional: defaults to "solar-pro2-preview"
 ```
 
 You can get your API key from [Upstage Console](https://console.upstage.ai/).
+
+**Environment Variables:**
+- `UPSTAGE_API_KEY` (required): Your Upstage API key for accessing Document Parse and SolarLLM APIs
+- `UPSTAGE_MODEL_NAME` (optional): The SolarLLM model to use for analysis. Defaults to `solar-pro2-preview` if not specified
 
 ### 2. Install Dependencies
 
@@ -65,7 +70,7 @@ The application integrates with Upstage Document Parse API to extract text conte
 
 The application uses Upstage SolarLLM for intelligent NDA comparison and risk analysis:
 
-- **Model**: `solar-pro2-preview`
+- **Model**: Configurable via `UPSTAGE_MODEL_NAME` (defaults to `solar-pro2-preview`)
 - **Endpoint**: `https://api.upstage.ai/v1/chat/completions`
 - **Features**: High reasoning effort for detailed legal analysis
 

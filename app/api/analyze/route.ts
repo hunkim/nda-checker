@@ -27,6 +27,7 @@ interface SolarLLMResponse {
 
 async function analyzeWithSolarLLM(referenceText: string, customerText: string): Promise<any> {
   const apiKey = process.env.UPSTAGE_API_KEY
+  const modelName = process.env.UPSTAGE_MODEL_NAME || "solar-pro2-preview"
   
   if (!apiKey) {
     throw new Error("UPSTAGE_API_KEY environment variable is required")
@@ -114,7 +115,7 @@ Focus on practical legal analysis and actionable recommendations.`
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: "solar-pro2-preview",
+      model: modelName,
       messages: messages,
       reasoning_effort: "high",
       stream: false,
